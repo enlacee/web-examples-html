@@ -188,9 +188,7 @@ $(function() {
       });
 */
       //Ranom ID
-      console.log('formData', formData);
       formData.append('id', Math.random());
-      console.log('formData', formData);
       
 
       $.ajax({
@@ -202,9 +200,7 @@ $(function() {
           processData: false,
           type: 'POST',
           success: function(response) {
-          	console.log('response', response);
-          	//var response = $.parseJSON(response); 
-
+            console.log('response', response);
           	alert( response.message );
           }
 
