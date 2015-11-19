@@ -1,6 +1,6 @@
-<?php 
+<?php
 /*
-//Include connection db 
+//Include connection db
 include "connect.php";
 
 //Query
@@ -27,15 +27,15 @@ while ( $row = mysql_fetch_assoc( $result ) ) {
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      
+
       <!-- form -->
       <form action="./inc/inc_upload.php" name="form" id="form" method="POST" enctype="multipart/form-data">
         <legend>Formulario para subir imagen y documentos al servidor al servidor</legend>
         <p><strong>Alcance:</strong> Crear varias aplicaciones funcionales, seguras y optimas para subir ficheros al servidor usando AJAX, PHP y MySQL, utilizaremos plugins especificos que iremos integrando a este proyecto base como ejemplos, luego de desarrollarlos todos chequearemos el rendimiento y requerimientos mínimos de detalles para integrarlos en todos los proyectos que desarrollemos. </p>
-        
+
         <!-- row -->
         <div class="row">
-          
+
           <!-- box -->
           <div class="col-xs-12 box box_1">
             <div class="panel panel-primary">
@@ -112,7 +112,7 @@ while ( $row = mysql_fetch_assoc( $result ) ) {
     </div><!--/ col-xs-12 -->
   </div><!--/ row -->
 </div><!--/ container -->
-	
+
 <script src="./assets/js/jquery-2.1.4.min.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
 <script src="./assets/lib/formvalidation/dist/js/formValidation.min.js"></script>
@@ -189,7 +189,7 @@ $(function() {
 */
       //Ranom ID
       formData.append('id', Math.random());
-      
+
 
       $.ajax({
           url: $form.attr('action'),
