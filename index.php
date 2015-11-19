@@ -30,7 +30,7 @@ while ( $row = mysql_fetch_assoc( $result ) ) {
 
       <!-- form -->
       <form action="./inc/inc_upload.php" name="form" id="form" method="POST" enctype="multipart/form-data">
-        <legend>Formulario para subir imagen y documentos al servidor al servidor</legend>
+        <legend>Formulario </legend>
         <p><strong>Alcance:</strong> Crear varias aplicaciones funcionales, seguras y optimas para subir ficheros al servidor usando AJAX, PHP y MySQL, utilizaremos plugins especificos que iremos integrando a este proyecto base como ejemplos, luego de desarrollarlos todos chequearemos el rendimiento y requerimientos mínimos de detalles para integrarlos en todos los proyectos que desarrollemos. </p>
 
         <!-- row -->
@@ -40,7 +40,7 @@ while ( $row = mysql_fetch_assoc( $result ) ) {
           <div class="col-xs-12 box box_1">
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <h3 class="panel-title">Selector de estados</h3>
+                <h3 class="panel-title">Selector de Regiones</h3>
               </div>
               <div class="panel-body">
                 <div class="row">
@@ -92,7 +92,6 @@ while ( $row = mysql_fetch_assoc( $result ) ) {
 <script src="./assets/js/bootstrap.min.js"></script>
 <script src="./assets/lib/formvalidation/dist/js/formValidation.min.js"></script>
 <script src="./assets/lib/formvalidation/dist/js/framework/bootstrap.min.js"></script>
-
 <script>
 var ubigeoPeru = {
 	ubigeos: new Array()
@@ -132,7 +131,7 @@ function showRegionsList() {
 
 function onChange_Region() {
 	document.querySelector('#provinces-list').innerHTML = '';
-	//document.querySelector('#districts-list').innerHTML = '';
+	document.querySelector('#districts-list').innerHTML = '';
 
 	showProvincesList(this.value);
 }
@@ -165,7 +164,6 @@ function onChange_Province() {
 function showDistrictsList(coddpto, codprov) {
 	var select = document.querySelector('#districts-list');
 	select.appendChild(document.createElement("option"));
-	//select.addEventListener('change', onChange_Province, false);
 
 	ubigeoPeru.ubigeos.forEach(function(ubigeo) {
 		coddpto = parseInt(coddpto);
@@ -182,8 +180,6 @@ function showDistrictsList(coddpto, codprov) {
 	});
 }
 
-</script>
-<!--/Code javascript and PHP-->
 </script>
 
 </body>
